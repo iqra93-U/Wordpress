@@ -10,7 +10,7 @@ get_header();
 				if (have_posts()):
 					while(have_posts()):
 						the_post();?>
-						<article class="card">
+						<article class="card .card-module">
 						<img loading="lazy"  src="<?php the_post_thumbnail_url('imgthumbnailActuality'); ?>" alt="Some code" class="card-img">
 							
 							

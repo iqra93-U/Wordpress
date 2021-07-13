@@ -12,7 +12,7 @@ get_header();
    
 				<div class="hero-content">
 					<h1 class="hero-title"><?php the_field('main_slogan'); ?></h1>
-					<a href="<?php the_permalink('http://localhost:8888/DWWM/students/'); ?>" class="hero-link"> <?php the_field('main_slogan_link_'); ?> </a>
+					<a href="<?php echo get_post_type_archive_link('students'); ?>" class="hero-link"> <?php the_field('main_slogan_link_'); ?> </a>
 				</div>
 			</div>
 		</section>
@@ -39,7 +39,7 @@ get_header();
 						?>
 
                            
-						<article class="card">
+						<article class="card card-module">
 							<img loading="lazy"  src="<?php the_post_thumbnail_url('imgthumbnailActuality'); ?>" alt="Some code" class="card-img">
 								
 								
@@ -139,7 +139,7 @@ get_header();
 					while ($requete->have_posts()):
 						$requete->the_post(); 
 						?>							   
-					<article class="card">
+					<article class="card card-module">
 							<img loading="lazy"  src="<?php the_post_thumbnail_url( 'imgthumbnailFormation' ); ?>" alt="Some code" class="card-img" >
 							<div class="card-content">
 								<h2 class="card-title"><?php the_field('sub_title_formation'); ?></h2>

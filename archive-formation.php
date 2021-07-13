@@ -17,7 +17,7 @@ get_header();
 					while(have_posts()):
 						the_post();?>
 						
-						<article class="card">
+						<article class="card card-module">
 							<img loading="lazy"  src="<?php the_post_thumbnail_url( 'imgthumbnailFormation' ); ?>" alt="Some code" class="card-img" >
 							<div class="card-content">
 								<h2 class="card-title"><?php the_field('sub_title_formation'); ?></h2>
@@ -43,7 +43,7 @@ get_header();
 	
 
   
-		<nav class="pagination">
+			<nav class="pagination">
 				<?php 
                     $args = [
                         'prev_text' => '&laquo;',

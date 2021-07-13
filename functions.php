@@ -149,6 +149,10 @@ function my_wp_nav_menu_objects( $items, $args ) {
 
 
 
-
-
+// for limited number of posts on CPT students
+function wst_157845( $query ) {
+  if ( !is_admin() && $query->is_main_query() && is_archive('students') )
+      $query->set( 'posts_per_page', 12 );
+  }
+add_action( 'pre_get_posts', 'wst_157845'); 
 
