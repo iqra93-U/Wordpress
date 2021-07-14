@@ -147,12 +147,6 @@ function my_wp_nav_menu_objects( $items, $args ) {
 	
 }
 
-// function fwp_home_custom_query( $query ) {
-//   if ( $query->is_archive('students') && $query->is_main_query() ) {
-//       $query->set( 'post_type', [ 'students' ] );
-//       $query->set( 'posts_per_page', 12 );
-//   }
-// }
 
 // for limited number of posts on CPT students
 function limited_students_per_page( $query ) {
