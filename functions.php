@@ -147,12 +147,24 @@ function my_wp_nav_menu_objects( $items, $args ) {
 	
 }
 
-
+// function fwp_home_custom_query( $query ) {
+//   if ( $query->is_archive('students') && $query->is_main_query() ) {
+//       $query->set( 'post_type', [ 'students' ] );
+//       $query->set( 'posts_per_page', 12 );
+//   }
+// }
 
 // for limited number of posts on CPT students
-function wst_157845( $query ) {
-  if ( !is_admin() && $query->is_main_query() && is_archive('students') )
+function limited_students_per_page( $query ) {
+  if ( !is_admin() && $query->is_main_query() &&is_post_type_archive('students') )
       $query->set( 'posts_per_page', 12 );
   }
-add_action( 'pre_get_posts', 'wst_157845'); 
+add_action( 'pre_get_posts', 'limited_students_per_page'); 
+
+function limited_formation_per_page( $query ) {
+  if ( !is_admin() && $query->is_main_query() &&is_post_type_archive('formation') )
+      $query->set( 'posts_per_page', 6 );
+  }
+add_action( 'pre_get_posts', 'limited_formation_per_page'); 
+
 
