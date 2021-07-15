@@ -11,7 +11,7 @@ get_header();
 					while(have_posts()):
 						the_post();?>
 						<article class="card .card-module">
-						<img loading="lazy"  src="<?php the_post_thumbnail_url('imgthumbnailActuality'); ?>" alt="Some code" class="card-img">
+						<img loading="lazy"  src="<?php the_post_thumbnail_url('imgthumbnailActuality'); ?>" alt="<?php the_field('card_title'); ?>" class="card-img">
 							
 							
 							<div class="card-content">

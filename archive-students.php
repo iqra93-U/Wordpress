@@ -1,5 +1,5 @@
 <?php 
-// Template Name: My student page
+
 get_header();
 ?>
         
@@ -13,7 +13,7 @@ get_header();
                             the_post();?>
 
                     <article class="student">
-                        <img loading="lazy"  src="<?php the_post_thumbnail_url('imgthumbnailStudent'); ?>" alt="Francine Auhi" class="student-img">
+                        <img loading="lazy"  src="<?php the_post_thumbnail_url('imgthumbnailStudent'); ?>" alt="<?php the_field('student_name'); ?>" class="student-img">
                         <h2 class="student-name"><?php the_field('student_name'); ?></h2>
                         <a href="<?php the_permalink() ?>" class="student-link"><?php the_field('student_link'); ?></a>
                     </article>

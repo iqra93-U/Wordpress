@@ -1,5 +1,4 @@
 <?php 
-// Template Name: My student page
 get_header();
 ?>
         
@@ -18,7 +17,7 @@ get_header();
 						the_post();?>
 						
 						<article class="card card-module">
-							<img loading="lazy"  src="<?php the_post_thumbnail_url( 'imgthumbnailFormation' ); ?>" alt="Some code" class="card-img" >
+							<img loading="lazy"  src="<?php the_post_thumbnail_url( 'imgthumbnailFormation' ); ?>" alt="<?php the_field('sub_title_formation'); ?>" class="card-img" >
 							<div class="card-content">
 								<h2 class="card-title"><?php the_field('sub_title_formation'); ?></h2>
 								<p class="card-excerpt"><?php the_field('description_formation_'); ?></p>

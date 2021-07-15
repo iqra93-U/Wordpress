@@ -5,7 +5,7 @@ get_header();
  <main id="main-content">
  
 	
-		<section class="home-hero inverted"style="background-image: url('<?php echo get_template_directory_uri(); ?>/../img/hero-background.jpg'), url('<?php the_post_thumbnail_url('1366x676') ?>');">
+		<section class="home-hero inverted"style="background-image:url('<?php the_post_thumbnail_url('1366x676') ?>');">
 		            <p><?php the_content(); ?></p>
 	      
 			<div class="container">
